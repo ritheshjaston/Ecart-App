@@ -1,0 +1,16 @@
+@media (min-width: 901px) {
+    
+}
+.cardimage{
+    width: 250px;
+    object-fit: fill;
+    height: 250px;
+    margin: auto;
+}
+.input{
+    border-radius: 4px;
+    width: 80%;
+    height: 38px;
+    color: blue;
+    margin-left: 20px;
+}
