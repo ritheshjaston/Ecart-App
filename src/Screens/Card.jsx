@@ -9,6 +9,7 @@ export default function Card() {
                 <div className="card-body">
                     <h5 className="card-title">Product Name</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div className="d-flex"><h5>Price : &nbsp; </h5> <h3 style={{color:"red"}}>20000</h3></div>
                     <hr />
                     <div><select className="m-2    rounded " style={{height:" 36px",width: "52px",background:"#ffc107"}} >
                         {Array.from(Array(6), (e, i) => {

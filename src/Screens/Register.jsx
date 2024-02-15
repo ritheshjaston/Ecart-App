@@ -30,7 +30,7 @@ export default function Register() {
                     <label htmlFor="location" className='formlabel'>Location</label> <br />
                     <input type="text" name='geolocation' className='input' value={credentials.geolocation} onChange={change} />
                     <button type="submit" className="btn btn-outline-primary buttonform">Signup now</button>
-                    <Link to="/login" className="btn btn-outline-danger buttonalreadyuser" >Don't have account?signup </Link>
+                    <Link to="/login" className="btn btn-outline-danger buttonalreadyuser" >Already have account?signin </Link>
 
                     <br />
                     <br />

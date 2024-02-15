@@ -15,7 +15,7 @@ export default function Signin() {
     return (
       <div>
         <div className="signupmain container">
-          <h2>Sign In | Food App</h2>
+          <h2>Sign In | E-Cart</h2>
           <br />
           <br />
               <form onSubmit={handlesubmit}>
@@ -28,6 +28,8 @@ export default function Signin() {
 
                   <button type="submit" className="btn btn-outline-primary buttonform" >Sign In</button>
                   <Link to="/Register" className="btn btn-outline-danger buttonalreadyuser" >Don't have account?signup </Link>
+                  <br />
+                  <br />
                   <br />
                  
               </form>

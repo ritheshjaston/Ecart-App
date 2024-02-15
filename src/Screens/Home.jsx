@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <div>
             <Navbar />
-           <div className="container"> <h1 className="textabovecaurosol">Anything, anytime, <br />anywhere</h1></div>
+            <h1 className="textabovecaurosol">Anything, anytime, <br />anywhere</h1>
             <Caurosal />
             <div className='subcarddiv container '>
                 <div className="row mb-3">
