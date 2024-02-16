@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Register from '../Screens/Register'
 import Signin from '../Screens/Signin'
 import AddItem from '../Admin/AddItem'
+import Cart from '../User/Cart'
 export default function Router() {
     return (
         <div>
@@ -13,6 +14,7 @@ export default function Router() {
                     <Route exact path='/Register' element={<Register />} />
                     <Route exact path='/login' element={<Signin />} />
                     <Route exact path='/additems' element={<AddItem />} />
+                    <Route exact path='/cart' element={<Cart />} />
                 </Routes>
             </BrowserRouter>
         </div>

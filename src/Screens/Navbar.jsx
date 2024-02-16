@@ -27,7 +27,7 @@ export default function Navbar() {
                     </form>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link className="nav-link" to="#">Cart<i class="fa fa-shopping-cart"></i></Link>
+                            <Link to="/cart" className="nav-link" >Cart<i class="fa fa-shopping-cart"></i></Link>
                             <Link to="/login" className="nav-link active" aria-current="page" >Login</Link>
                             <Link to="/Register" className="nav-link active" aria-current="page" >Register</Link>
                             <Link to="/additems" className="nav-link active" aria-current="page" >Add Items</Link>
