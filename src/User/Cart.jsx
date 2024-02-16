@@ -24,7 +24,7 @@ export default function Cart() {
               .map((data) => {
                 const product = products.find((p) => p.prod_id === data.prod_id);
                 if (product) {
-                  total = total + parseInt(product.pprice);
+                  total = total +(parseInt(product.pprice)*parseInt(data.qty));
                   return (
                     <Cardcart
                       key={product.prod_id}
