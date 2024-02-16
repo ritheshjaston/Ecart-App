@@ -4,16 +4,13 @@ import { Link } from 'react-router-dom'
 import logos from '../Images/logo.png'
 import '../main.css'
 import '../my.css'
+import { useNavigate } from 'react-router-dom'
 export default function Navbar() {
-    const [credentials, setcredentials] = useState({ email: "", password: "" });
-    const handlesubmit = () => {
-
+    const navigate = useNavigate();
+    const logout = async () => {
+        await localStorage.removeItem("currentUser");
+        navigate('/login');
     }
-    const change = (event) => [
-        setcredentials({ ...credentials, [event.target.name]: event.target.value })
-    ]
-
-    var myModalEl = document.querySelector('#exampleModal1')
 
     return (
         <>
@@ -28,12 +25,19 @@ export default function Navbar() {
                     </form>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to="/cart" className="nav-link" >Cart<i class="fa fa-shopping-cart"></i></Link>
-                            <Link to="/login" className="nav-link active" aria-current="page" >Login</Link>
-                            <Link to="/Register" className="nav-link active" aria-current="page" >Register</Link>
-                            <Link to="/additems" className="nav-link active" aria-current="page" >Add Items</Link>
-                            <Link to="/logout" className="nav-link active" aria-current="page" >Log Out</Link>
+                            {localStorage.getItem("currentUser") ? <>
+                                <Link to="/cart" className="nav-link" >Cart<i class="fa fa-shopping-cart"></i></Link>
+                                <Link onClick={logout} className="nav-link active" aria-current="page" >Log Out</Link>
+                            </>
+                                : <>
+                                    <Link to="/login" className="nav-link active" aria-current="page" ><i class="fa fa-sign-in" />Login</Link>
+                                    <Link to="/Register" className="nav-link active" aria-current="page" >Register</Link>
+                                </>
 
+                            }
+
+
+                            {/* <Link to="/additems" className="nav-link active" aria-current="page" >Add Items</Link> */}
                         </div>
                     </div>
                 </div>
