@@ -2,7 +2,7 @@
     
 }
 .cardimage{
-    width: 250px;
+    width: 18rem;
     object-fit: fill;
     height: 250px;
     margin: auto;
@@ -13,4 +13,12 @@
     height: 38px;
     color: blue;
     margin-left: 20px;
+}
+.card-title{
+    color: black;
+    text-align: center;
+}
+.card-body{
+    background-color: #dfe0e4;
+    color: black;
 }

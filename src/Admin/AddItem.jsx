@@ -20,7 +20,7 @@ export default function AddItem() {
         console.log(item);
     }
     const handler = () => {
-        const prodid = value.length == 0 ? 1 : value[value.length - 1].u_id + 1;
+        const prodid = value.length == 0 ? 1 : value[value.length - 1].prod_id + 1;
         const details = {
             prod_id: prodid, ...item
         }

@@ -39,7 +39,7 @@ export default function Register() {
             setvalue(finaldata);
             localStorage.setItem("RegesteredUser", JSON.stringify(finaldata))
             alert("Registration Successful!")
-            navigate('/');
+            navigate('/login');
         }
     }
     console.log(data);
