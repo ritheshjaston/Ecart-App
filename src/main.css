@@ -3,7 +3,7 @@
 }
 .cardimage{
     width: 18rem;
-    object-fit: fill;
+    object-fit: cover;
     height: 250px;
     margin: auto;
 }
