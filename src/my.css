@@ -52,8 +52,14 @@ h5 {
   margin-left: 20px;
   font-size: 30px;
 }
+.navsearch{
+    width: 70%;
+}
 
 @media only screen and (max-width: 480px) {
+    .navsearch{
+        width: 100%;
+    }
   .signupmain {
     width: 90%;
     height: fit-content;

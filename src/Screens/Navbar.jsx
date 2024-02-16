@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logos from '../Images/logo.png'
 import '../main.css'
+import '../my.css'
 export default function Navbar() {
     const [credentials, setcredentials] = useState({ email: "", password: "" });
     const handlesubmit = () => {
@@ -22,7 +23,7 @@ export default function Navbar() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <form className="d-flex" style={{ width: "70%" }}>
+                    <form className="d-flex navsearch" >
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     </form>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
