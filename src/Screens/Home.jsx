@@ -7,6 +7,7 @@ import Card from './Card'
 import '../App.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useRef } from 'react'
 import '../main.css'
 import '../my.css'
 import { useNavigate } from 'react-router-dom'
@@ -34,12 +35,28 @@ export default function Home() {
     ]);
     const [fooditems, setfooditems] = useState([]);
     const [search, setsearch] = useState('');
-
+    const cauRef = useRef(null);
+    const anywhereRef = useRef(null);
     useEffect(() => {
         const Alldata = JSON.parse(localStorage.getItem("Products"));
         setfooditems(Alldata);
         console.log(Alldata, "all data")
     }, []);
+
+    useEffect(() => {
+        const cauElement = cauRef.current;
+        const anywhereElement = anywhereRef.current;
+
+        if (cauElement && anywhereElement) {
+            if (search === "") {
+                cauElement.style.display = 'block';  // or 'inline', or 'flex'
+                anywhereElement.style.display = 'block';
+            } else {
+                cauElement.style.display = 'none';
+                anywhereElement.style.display = 'none';
+            }
+        }
+    }, [search]);
 
     const logout = async () => {
         await localStorage.removeItem("currentUser");
@@ -50,7 +67,7 @@ export default function Home() {
             {/* Navbar start */}
 
             <>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light" id='navb'>
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="#"><img style={{ width: "100px" }} src={logos} alt="" /></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,8 +107,14 @@ export default function Home() {
                 </nav>
             </>
             {/* Navbar end */}
-            <h1 className="textabovecaurosol">Anything, anytime, <br />anywhere</h1>
-            <Caurosal />
+            <div ref={anywhereRef} id='anywhere' >
+
+                <h1 className="textabovecaurosol">Anything, anytime, <br />anywhere</h1>
+            </div>
+            <div ref={cauRef} id='cau'>
+
+                <Caurosal />
+            </div>
             <div >
                 <br />
                 {

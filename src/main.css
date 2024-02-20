@@ -7,6 +7,10 @@
     height: 250px;
     margin: auto;
 }
+.cardimage:hover{
+   
+        border: 3px solid black;
+}
 .input{
     border-radius: 4px;
     width: 80%;
@@ -21,4 +25,19 @@
 .card-body{
     background-color: #dfe0e4;
     color: black;
+    /* height: 280px; */
+}
+/* .card-text{
+    height: 71px;
+    overflow: hidden;
+} */
+.dec{
+    height: 98px !important;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.dec:hover{
+    height: fit-content !important;
+    overflow: visible;
+    margin-bottom: 2px;
 }

@@ -46,8 +46,14 @@ export default function Card(props) {
             <div className="card" style={{ width: "18rem" }}>
                 <img src={props.img} className="card-img-top cardimage" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{props.name}</h5>
-                    <p className="card-text">{props.desc}</p>
+                    <div style={{height: "29px",overflow: "hidden"}}>
+
+                        <h5 className="card-title">{props.name}</h5>
+                    </div>
+                    <div className='dec'>
+
+                        <p className="card-text">{props.desc}</p>
+                    </div>
                     <div className="d-flex"><h5>Price : &nbsp; </h5> <h3 id={props.prod_id} style={{ color: "red" }}>{props.price * quantity}</h3></div>
                     <hr />
                     {
@@ -60,7 +66,7 @@ export default function Card(props) {
                                 <option value='4'>4</option>
                                 <option value='5'>5</option>
                             </select>
-                                <Link id={(props.prod_id)+"1"} onClick={() => addcart(props.prod_id)} className="btn btn-success"> <i class="fa fa-shopping-cart"> &nbsp;</i>Add to Cart</Link>
+                                <Link id={(props.prod_id) + "1"} onClick={() => addcart(props.prod_id)} className="btn btn-success"> <i class="fa fa-shopping-cart"> &nbsp;</i>Add to Cart</Link>
                             </div>
                         </> : ""
                     }
